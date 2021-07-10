@@ -2,10 +2,16 @@ import React from 'react'
 import Layout from './Layout'
 import LoginForm from './LoginForm'
 
-const Login = () => {
+const Login = props => {
+
+    let userType = ''
+    if (props.location.state !== undefined) {
+        userType = props.location.state.userType
+    }
+
     return (
         <Layout footerBottom={true}>
-            <LoginForm />
+            <LoginForm userType={userType} />
         </Layout>
     )
 }

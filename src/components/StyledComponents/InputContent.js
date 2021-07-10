@@ -28,7 +28,7 @@ export const Icon = styled.div`
     color: #EDEDED;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-    padding: 6px;
+    padding: 4px;
     position: relative;
     top: 2px;
 

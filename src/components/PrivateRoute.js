@@ -4,12 +4,23 @@ import { useHistory, Route } from 'react-router-dom'
 const PrivateRoute = ({ path, component }) => {
     
     const history = useHistory()
-    let response = localStorage.getItem('admin')
-    let admin = JSON.parse(response)
+
+    let response = ''
+    let userType = ''
+
+    if (path === '/user') {
+        response = localStorage.getItem('comicUser')
+        userType = 'user'
+    } else if (path === '/admin') {
+        response = localStorage.getItem('admin')
+        userType = 'admin'
+    }
+
+    let user = JSON.parse(response)
     
 
-    if (admin === null) {
-        history.push('/login')
+    if (user === null) {
+        history.push('/login', { userType })
         return <p></p>
     }
     else  return <Route path={path} component={component} />

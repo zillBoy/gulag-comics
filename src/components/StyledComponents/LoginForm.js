@@ -64,5 +64,16 @@ export const Link = styled.a`
     cursor: pointer;
 `;
 
+export const ErrorMessage = styled.p`
+    text-align: center;
+    color: #fff;
+    background-color: rgb(218,0,55, 0.9);
+    width: 50%;
+    margin: 0 auto;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-top: 4%;
+`;
+
 // #444444
 // #171717

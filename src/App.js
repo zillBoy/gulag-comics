@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import AdminPage from './components/AdminPage'
 import Login from './components/Login'
 import PrivateRoute from './components/PrivateRoute'
+import UserPage from './components/UserPage'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route exact path='/' component={HomePage} />
         <Route path='/login' component={Login} />
         <PrivateRoute path='/admin' component={AdminPage} />
+        <PrivateRoute path='/user' component={UserPage} />
         <PrivateRoute path='/apple' component={Apple} />
       </Switch>
     </Router>
