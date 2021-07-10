@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    /* position: absolute;
-    bottom: 0%; */
+    
+    color: ${props => props.theme.main};
+
+    position: ${props => props.footerBottom && 'absolute'};
+    bottom: ${props => props.footerBottom && '0%'};
+
     width: 98%;
     display: flex;
     justify-content: space-between;
